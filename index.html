@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Trispace:100,200,300,regular,500,600,700,800"
+        rel="stylesheet" />
+    <title>Forms</title>
+</head>
+
+<body>
+    <form onsubmit="return validateForm(this);" novalidate>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email" required><br>
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date"><br><br>
+        <label for="about">About Yourself:</label><br>
+        <textarea id="about" name="about" rows="5" cols="33" placeholder="I am a..." required></textarea><br><br>
+        <label for="favColor">What is your favorite color:</label><br>
+        <select name="favColor" id="favColor">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="other">Other</option>
+        </select><br><br>
+        <label id="petLabel">Choose your favorite pets:</label><br>
+        <input type="checkbox" class="pet" name="dog" required>
+        <label for="dog">Dog</label>
+        <input type="checkbox" class="pet" name="cat" required>
+        <label for="cat">Cat</label>
+        <input type="checkbox" class="pet" name="goat" required>
+        <label for="goat">Goat</label>
+        <input type="checkbox" class="pet" name="pig" required>
+        <label for="pig">Pig</label>
+        <br><br>
+        <fieldset>
+            <legend>Select your favourite programming language:</legend>
+
+            <div>
+                <input type="radio" id="java" name="lang" value="java">
+                <label for="java">Java</label>
+            </div>
+
+            <div>
+                <input type="radio" id="python" name="lang" value="python">
+                <label for="python">Python</label>
+            </div>
+
+            <div>
+                <input type="radio" id="javaScript" name="lang" value="javaScript">
+                <label for="javaScript">JavaScript</label>
+            </div>
+        </fieldset>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="results">
+        <h2>Form Data</h2>
+        <pre></pre>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
